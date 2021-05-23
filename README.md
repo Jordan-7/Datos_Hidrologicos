@@ -90,7 +90,7 @@ MMQ_Estrella <- tapply(estrella, format(Datatime, format="%m"), FUN=sum)
 
 MMQ_Banano <- tapply(banano, format(Datatime, format="%m"), FUN=sum)
 
-### La siguiente linea se utiliza el analisis de la correlación de los datos aplicados y se representaran 3 graficos para la finalización de este trabajo, que representan la correlacion de los datos.
+### La siguiente linea se utiliza el analisis de la correlación de los datos aplicados y se representaran 4 graficos para la finalización de este trabajo, que representan la correlacion de los datos.
 
 cordata <- cor(dat[,2:3], method= "spearman")
 
@@ -108,7 +108,6 @@ plot(dat.lm)
 
 ![Scale location](https://user-images.githubusercontent.com/82826199/119246132-3d8cc680-bb3c-11eb-870a-68e8629e22d4.png)
 
-![RevsLev](https://user-images.githubusercontent.com/82826199/119246140-51382d00-bb3c-11eb-88e2-796de54d7e25.png)
 
 
 Con Este ultimo grafico se daria por terminado la secion del día 17 de mayo, sobre la **Exploración de Datos Hidrológicos**
