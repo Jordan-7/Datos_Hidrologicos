@@ -43,7 +43,7 @@ names(dat) <- c("fecha", "estrella", "banano")
 
 attach(dat)
 
-### Se utiliza para mostrar una grafica
+### Se utiliza para mostrar una grafica; los valores de las columnas Estrellas y Banano
 
 plot(estrella, col="blue")
 
@@ -64,7 +64,7 @@ MAQ_Estrella <- tapply(estrella, format(Datatime, format="%Y"), FUN=sum)
 
 MAQ_Banano <- tapply(banano, format(Datatime, format="%Y"), FUN=sum)
 
-### El siguiente comando se usa para crear un documento en el directorio donde se tiene el documento de R salvado/guardado.
+### El siguiente comando se usa para crear un documento de formato .csv en el directorio donde se tiene el documento de R salvado/guardado.
 
 write.csv(rbind(MAQ_Estrella,MAQ_Banano), file= "MAQ.csv")
 
@@ -82,7 +82,7 @@ lines(MAQ_Banano, col=4)
 
 ![MAQ Estrella](https://user-images.githubusercontent.com/82826199/119245929-5f854980-bb3a-11eb-8730-a75fbf23e8d9.png)
 
-Como se pudo apreciar anterior mente la linea y los puntos representan la diferencia con respecto a los otros valores.
+Como se pudo apreciar anterior mente la linea representa los valores de los caudales del año una sustancia y los puntos representan la diferencia con respecto a los otros valores. Linea 1 Estrella y Linea 2 Banano.
 
 ### Con esta linea de comando se puede crear una grafica que representa los valores mensuales del caudal de los datos.
 
@@ -90,7 +90,28 @@ MMQ_Estrella <- tapply(estrella, format(Datatime, format="%m"), FUN=sum)
 
 MMQ_Banano <- tapply(banano, format(Datatime, format="%m"), FUN=sum)
 
+### La siguiente linea se utiliza el analisis de la correlación de los datos aplicados y se representaran 3 graficos para la finalización de este trabajo, que representan la correlacion de los datos.
 
+cordata <- cor(dat[,2:3], method= "spearman")
+
+dat.lm <- lm(dat[,2] ~ dat[,3], data=dat)
+
+summary(dat.lm)
+
+plot(dat.lm)
+
+![RvsL](https://user-images.githubusercontent.com/82826199/119246105-fe5e7580-bb3b-11eb-8a8f-2e54e271e0c9.png)
+
+![RvsF](https://user-images.githubusercontent.com/82826199/119246111-133b0900-bb3c-11eb-8dec-75eca3ba38b0.png)
+
+![NormalQ-Q](https://user-images.githubusercontent.com/82826199/119246119-2221bb80-bb3c-11eb-9e6d-cfa1d0a6c892.png)
+
+![Scale location](https://user-images.githubusercontent.com/82826199/119246132-3d8cc680-bb3c-11eb-870a-68e8629e22d4.png)
+
+![RevsLev](https://user-images.githubusercontent.com/82826199/119246140-51382d00-bb3c-11eb-88e2-796de54d7e25.png)
+
+
+Con Este ultimo grafico se daria por terminado la secion del día 17 de mayo, sobre la **Exploración de Datos Hidrológicos**
 
 
 
