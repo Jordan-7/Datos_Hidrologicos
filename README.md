@@ -82,9 +82,9 @@ lines(MAQ_Banano, col=4)
 
 ![MAQ Estrella](https://user-images.githubusercontent.com/82826199/119245929-5f854980-bb3a-11eb-8730-a75fbf23e8d9.png)
 
-Como se pudo apreciar anterior mente la linea representa los valores de los caudales del año una sustancia y los puntos representan la diferencia con respecto a los otros valores. Linea 1 Estrella y Linea 2 Banano.
+Como se pudo apreciar anterior mente la linea representa los valores de los caudales del año de una sustancia en especifico y los puntos representan la diferencia con respecto al otro valor (es el valor de la otra columna estudiada). Linea 1 Estrella y Linea 2 Banano.
 
-### Con esta linea de comando se puede crear una grafica que representa los valores mensuales del caudal de los datos.
+### Con esta linea de comando se puede crear una variable que represente los valores mensuales del caudal de los datos.
 
 MMQ_Estrella <- tapply(estrella, format(Datatime, format="%m"), FUN=sum)
 
