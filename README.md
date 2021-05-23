@@ -37,3 +37,19 @@ hist(banano, col="blue")
 ![H Banano](https://user-images.githubusercontent.com/82826199/119245559-74141280-bb37-11eb-876e-28284c3e6021.png)
 
 
+### Se nombra las columnas de los datos para así hacer uso de una en especifico cuando sea necesario
+
+names(dat) <- c("fecha", "estrella", "banano")
+
+attach(dat)
+
+### Se utiliza para mostrar una grafica
+
+plot(estrella, col="blue")
+
+![Grafica estrella](https://user-images.githubusercontent.com/82826199/119245707-7aef5500-bb38-11eb-8258-097df07bbb74.png)
+
+
+
+
+
