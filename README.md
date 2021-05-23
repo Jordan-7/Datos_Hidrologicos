@@ -15,6 +15,8 @@ dat[!complete.cases(dat),]
 
 plot(dat[,2], type = "l", col="red")
 lines(dat[,3], col="yellow")
+
+## Grafico que se muestra en las anteriores lineas de codigo
 ![Grafico que se muestra en las anteriores lineas de codigo](https://user-images.githubusercontent.com/82826199/119245365-13380a80-bb36-11eb-8dde-c7b91c8c8dc2.png)
 
 ### Promedio de los caudales diarios (estadistica descriptva)
